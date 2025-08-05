@@ -10,7 +10,7 @@
 ## 三、使用方法
 - 下载包
 ```
-go get github.com/tpgzcyyao/log
+go get github.com/Juyz18/log
 ```
 - 导入包
 ```
@@ -85,8 +85,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/tpgzcyyao/config"
-	"github.com/tpgzcyyao/log"
+	"github.com/Juyz18/config"
+	"github.com/Juyz18/log"
 )
 
 type Config struct {

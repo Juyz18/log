@@ -7,8 +7,8 @@ import (
     "testing"
     "time"
 
-    "github.com/tpgzcyyao/config"
-    "github.com/tpgzcyyao/log"
+    "github.com/Juyz18/config"
+    "github.com/Juyz18/log"
 )
 
 type Config struct {

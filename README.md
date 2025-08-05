@@ -10,7 +10,7 @@ This is a golang package using for writing log.
 ## III. Description
 - Download the package.
 ```
-go get github.com/tpgzcyyao/log
+go get github.com/Juyz18/log
 ```
 - Import the package.
 ```
@@ -85,8 +85,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/tpgzcyyao/config"
-	"github.com/tpgzcyyao/log"
+	"github.com/Juyz18/config"
+	"github.com/Juyz18/log"
 )
 
 type Config struct {
