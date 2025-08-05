@@ -96,9 +96,11 @@ func LoadLogConfig(conf Config) error {
     l.flagTime = time.Now().Format(FlagTimeFmt)
     // init log level
     SetLogLevel(l.config.LogLevel)
+    fmt.Println("StdOutput: ", l.config.StdOutput)
     // std out
     if l.config.StdOutput {
         l.logger = log.New(os.Stderr, "", log.LstdFlags|log.Lmicroseconds)
+        fmt.Println("Return nil")
         return nil
     }
     // mkdir
@@ -120,6 +122,7 @@ func LoadLogConfig(conf Config) error {
     // init logger
     l.logger = log.New(l.file, "", log.LstdFlags|log.Lmicroseconds)
     // split log file
+    fmt.Println("Arrive splitLogFile: ", l.config.StdOutput)
     onceSplit.Do(func() {
         go splitLogFile()
     })
@@ -206,6 +209,7 @@ func SetLogLevel(level string) {
 // Split file when size is bigger than l.config.MaxSize.
 func splitLogFile() {
     for {
+        fmt.Println("Enter splitLogFile.")
         time.Sleep(time.Duration(1) * time.Second)
         nowTime := time.Now().Format(FlagTimeFmt)
         // split by time
