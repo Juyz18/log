@@ -81,7 +81,7 @@ func init() {
 // Execute file splitting concurrently.
 // Execute file clearing concurrently.
 func LoadLogConfig(conf Config) error {
-    fmt.Println("LoadLogConfig: ", l.config.StdOutput)
+    fmt.Println("LoadLogConfig: ", conf.StdOutput)
     l.config = &Config{
         FileName:   conf.FileName,
         MaxSize:    conf.MaxSize,
